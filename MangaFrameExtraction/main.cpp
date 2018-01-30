@@ -29,7 +29,7 @@ int MAX_HEIGHT = 1000;
 
 void execute(string input_dir, string output_dir, string filename)
 {
-    IplImage* input = cvLoadImage((input_dir + filename).c_str(), CV_LOAD_IMAGE_GRAYSCALE);
+    IplImage* input = cvLoadImage((input_dir + filename).c_str(), CV_LOAD_IMAGE_COLOR);
 
     // 幅・高さが最大長に収まるようにリサイズ。幅・高さがともに最大長より小さい場合は、ギリギリまで拡大
     if (input->width >= MAX_WIDTH || input->height >= MAX_HEIGHT) {
